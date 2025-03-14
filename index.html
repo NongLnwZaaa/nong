@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Web Example</title>
+    <style>
+        body {
+            background-color: rgb(220, 220, 220);
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 0px;
+        }
+        h1, h2 {
+            margin: 20px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        list {
+            cursor: pointer;
+            padding: 10px;
+            border: 2px solid rgb(0, 0, 0);
+            margin: 20px auto;
+            width: 300px;
+        }
+        list:hover {
+            background-color: rgb(200, 200, 200);
+        }
+    </style>
+</head>
+<body>
+    <h1>หน้าแรก</h1>
+    <h2>รายชื่อสมาชิก</h2>
+    <ul id="memberList">
+        <list onclick="showInfo('664245002', 'นางสาวกมลวรรณ ทับจิต')">กมลวรรณ</list>
+        <list onclick="showInfo('664245004', 'นายชิษณุพงศ์ เกตุพูนทอง')">ชิษณุพงศ์</list>
+        <list onclick="showInfo('664245010', 'นายต่อพงศ์ เพียรพัฒน์กุล')">ต่อพงศ์</list>
+        <list onclick="showInfo('664245014', 'นายธนวัฒน์ ไกรนรา')">ธนวัฒน์</list>
+        <list onclick="showInfo('664245016', 'นายกรภัทร์ ถิ่นผาแดง')">กรภัทร์</list>
+        <list onclick="showInfo('664245027', 'นางสาวแพรวา แผลงศร')">แพรวา</list>
+    </ul>
+    <p id="info"></p>
+    <script>
+        function showInfo(id, name) {
+            document.getElementById('info').innerText = `รหัส: ${id}\nชื่อ: ${name}`;
+        }
+        console.log("หน้าเว็บโหลดสำเร็จ");
+    </script>
+</body>
+</html>
